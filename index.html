@@ -1,101 +1,61 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=1920,height=1080,initial-scale=1">
-  <title>Partner Service — Facebook Live Overlay v2</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920,height=1080,initial-scale=1">
+<title>Partner Service | Live Overlay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="overlay">
+  <div class="bg-effects"><i></i><i></i><i></i><i></i></div>
 
-  <div class="ambient ambient-a"></div>
-  <div class="ambient ambient-b"></div>
-  <div class="grid"></div>
-  <div class="particles"></div>
-  <div class="streak streak-a"></div>
-  <div class="streak streak-b"></div>
-
-  <header class="header">
-    <div class="brand">
-      <img src="logo.png" class="logo" alt="">
-      <div class="brand-word">
-        <div class="brand-name">PARTNER</div>
-        <div class="brand-service">SERVICE</div>
-      </div>
+  <header class="top">
+    <div class="brand-panel">
+      <img src="logo.png" alt="Partner Service" class="logo">
+      <div class="brand-text"><b>PARTNER</b><span>SERVICE</span></div>
     </div>
-
-    <div class="headline">
-      <div>TU PRÓXIMA OPORTUNIDAD</div>
-      <strong>PUEDE EMPEZAR AQUÍ</strong>
-    </div>
-
-    <div class="live-pill"><i></i> EN VIVO</div>
+    <div class="headline"><strong>Tu próxima oportunidad</strong><span>puede empezar aquí</span></div>
+    <div class="live"><span class="fb">f</span><i></i><b>EN VIVO</b><em></em></div>
   </header>
 
-  <!-- These are visual guides only. Crop the real OBS sources to these exact rectangles. -->
-  <div class="screen-slot slot">
-    <div class="slot-inner"></div>
-    <div class="runner"></div>
-    <div class="slot-tag">▣ &nbsp; PANTALLA COMPARTIDA</div>
-  </div>
+  <main>
+    <section class="screen-frame frame">
+      <div class="screen-runner"></div>
+      <div class="screen-label"><span class="screen-icon">▣</span><b>PANTALLA COMPARTIDA</b></div>
+    </section>
 
-  <div class="camera-slot slot">
-    <div class="slot-inner"></div>
-    <div class="runner"></div>
-    <div class="slot-tag">● &nbsp; CÁMARA</div>
-  </div>
+    <section class="camera-frame frame">
+      <div class="screen-runner"></div>
+      <div class="camera-label"><span>●</span><b>CÁMARA</b></div>
+    </section>
 
-  <!-- Live chat panel: the panel is ready; real Facebook comments need a separate OBS source/plugin. -->
-  <aside class="chat-panel">
-    <div class="chat-head">
-      <div>
-        <span class="chat-title">COMENTARIOS EN VIVO</span>
-        <span class="chat-subtitle">Únete a la conversación</span>
+    <section class="chat-frame">
+      <div class="chat-topline"></div>
+      <div class="chat-title"><span class="chat-icon">•••</span><div><b>COMENTARIOS EN VIVO</b><small>¡Únete a la conversación!</small></div></div>
+      <div class="chat-messages" id="chatFeed">
+        <article><span class="avatar">A</span><div><b>Andrea</b><p>¡Hola! ¿Qué vacantes tienen disponibles?</p></div><time>10:24</time></article>
+        <article><span class="avatar">J</span><div><b>José</b><p>¿Dónde puedo postular?</p></div><time>10:26</time></article>
+        <article><span class="avatar">V</span><div><b>Valeria</b><p>Me interesa, ¿qué horarios manejan?</p></div><time>10:28</time></article>
+        <article><span class="avatar">L</span><div><b>Luis</b><p>¡Gracias por la información!</p></div><time>10:30</time></article>
       </div>
-      <span class="chat-live"><i></i> LIVE</span>
+    </section>
+
+    <div class="presenter-card">
+      <div class="presenter-avatar">S</div>
+      <div><b>SEBASTIÁN</b><span>Asistente de Reclutamiento y Selección</span></div>
     </div>
-
-    <div class="chat-feed" id="chatFeed">
-      <div class="chat-message">
-        <div class="chat-avatar">A</div>
-        <div><b>Andrea</b><span>¿Qué vacantes tienen disponibles?</span></div>
-      </div>
-      <div class="chat-message">
-        <div class="chat-avatar">J</div>
-        <div><b>José</b><span>¿Dónde puedo postular?</span></div>
-      </div>
-      <div class="chat-message">
-        <div class="chat-avatar">M</div>
-        <div><b>María</b><span>Hola, quiero información.</span></div>
-      </div>
-    </div>
-    <div class="chat-footer">Lee los comentarios y responde durante el live</div>
-  </aside>
-
-  <div class="presenter-card">
-    <div class="avatar">S</div>
-    <div>
-      <div class="presenter-name">SEBASTIÁN</div>
-      <div class="presenter-role">Asistente de Reclutamiento y Selección</div>
-    </div>
-  </div>
+  </main>
 
   <footer class="bottom-bar">
-    <div class="cta">
-      <span>¿BUSCAS UNA NUEVA OPORTUNIDAD?</span>
-      <strong>HABLEMOS Y CONOCE NUESTRAS VACANTES</strong>
-    </div>
-    <div class="whatsapp">
-      <div class="wa">WA</div>
-      <div>
-        <small>ESCRÍBEME POR WHATSAPP</small>
-        <strong>907 920 574</strong>
-      </div>
-    </div>
-    <div class="end">TE ESPERAMOS <b>›</b></div>
+    <div class="opportunity"><div class="megaphone">⌁</div><div><b>¡TÚ PUEDES!</b><span>GRANDES OPORTUNIDADES</span><strong>TE ESPERAN</strong></div></div>
+    <div class="bottom-presenter"><span class="person">●</span><div><b>SEBASTIÁN</b><small>Asistente de Reclutamiento y Selección</small></div></div>
+    <div class="whatsapp"><span class="wa">⌕</span><div><small>Contáctame por WhatsApp</small><b>907 920 574</b></div></div>
+    <div class="closing"><b>¡Hagamos</b><span>que suceda!</span></div>
   </footer>
-
 </div>
 <script src="script.js"></script>
 </body>
