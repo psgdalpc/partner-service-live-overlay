@@ -1,25 +1,24 @@
-// Small JavaScript layer for the OBS overlay.
-// The animation itself is CSS-based, so it keeps running smoothly in a Browser Source.
-
-const root = document.documentElement;
-
-// Add a subtle time-based hue/brightness variation without changing the brand colors.
-let t = 0;
-function ambientTick() {
-  t += 0.006;
-  const glow = 0.72 + Math.sin(t) * 0.08;
-  root.style.setProperty('--ambient-glow', glow.toFixed(3));
-  requestAnimationFrame(ambientTick);
-}
-ambientTick();
-
-// Optional keyboard shortcuts while previewing in a normal browser.
-// 1 = live, 2 = pause, 3 = closing. The default state remains LIVE.
-document.addEventListener('keydown', (event) => {
-  const body = document.body;
-  body.classList.remove('mode-live', 'mode-pause', 'mode-close');
-
-  if (event.key === '1') body.classList.add('mode-live');
-  if (event.key === '2') body.classList.add('mode-pause');
-  if (event.key === '3') body.classList.add('mode-close');
-});
+// Demo comments are visual placeholders.
+// Real Facebook comments cannot be pulled automatically by a transparent HTML overlay alone.
+// Replace the demo messages or connect a separate OBS Browser Source/plugin that exposes
+// Facebook Live comments, keeping this panel as the visual container.
+//
+// Optional demo rotation:
+const feed = document.getElementById('chatFeed');
+const demo = [
+  ['C','Carlos','¿Qué campaña tienen disponible?'],
+  ['L','Lucía','¿Cómo puedo postular?'],
+  ['D','Diego','¿El trabajo es presencial?'],
+  ['A','Andrea','¿Cuál es el horario?']
+];
+let idx = 0;
+setInterval(() => {
+  if (!feed) return;
+  const [letter,name,text] = demo[idx % demo.length];
+  idx++;
+  const el = document.createElement('div');
+  el.className = 'chat-message';
+  el.innerHTML = `<div class="chat-avatar">${letter}</div><div><b>${name}</b><span>${text}</span></div>`;
+  feed.appendChild(el);
+  while (feed.children.length > 4) feed.removeChild(feed.firstElementChild);
+}, 4200);
