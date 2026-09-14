@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920,height=1080,initial-scale=1">
+  <title>Partner Service — Facebook Live Overlay v2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="overlay">
+
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid"></div>
+  <div class="particles"></div>
+  <div class="streak streak-a"></div>
+  <div class="streak streak-b"></div>
+
+  <header class="header">
+    <div class="brand">
+      <img src="logo.png" class="logo" alt="">
+      <div class="brand-word">
+        <div class="brand-name">PARTNER</div>
+        <div class="brand-service">SERVICE</div>
+      </div>
+    </div>
+
+    <div class="headline">
+      <div>TU PRÓXIMA OPORTUNIDAD</div>
+      <strong>PUEDE EMPEZAR AQUÍ</strong>
+    </div>
+
+    <div class="live-pill"><i></i> EN VIVO</div>
+  </header>
+
+  <!-- These are visual guides only. Crop the real OBS sources to these exact rectangles. -->
+  <div class="screen-slot slot">
+    <div class="slot-inner"></div>
+    <div class="runner"></div>
+    <div class="slot-tag">▣ &nbsp; PANTALLA COMPARTIDA</div>
+  </div>
+
+  <div class="camera-slot slot">
+    <div class="slot-inner"></div>
+    <div class="runner"></div>
+    <div class="slot-tag">● &nbsp; CÁMARA</div>
+  </div>
+
+  <!-- Live chat panel: the panel is ready; real Facebook comments need a separate OBS source/plugin. -->
+  <aside class="chat-panel">
+    <div class="chat-head">
+      <div>
+        <span class="chat-title">COMENTARIOS EN VIVO</span>
+        <span class="chat-subtitle">Únete a la conversación</span>
+      </div>
+      <span class="chat-live"><i></i> LIVE</span>
+    </div>
+
+    <div class="chat-feed" id="chatFeed">
+      <div class="chat-message">
+        <div class="chat-avatar">A</div>
+        <div><b>Andrea</b><span>¿Qué vacantes tienen disponibles?</span></div>
+      </div>
+      <div class="chat-message">
+        <div class="chat-avatar">J</div>
+        <div><b>José</b><span>¿Dónde puedo postular?</span></div>
+      </div>
+      <div class="chat-message">
+        <div class="chat-avatar">M</div>
+        <div><b>María</b><span>Hola, quiero información.</span></div>
+      </div>
+    </div>
+    <div class="chat-footer">Lee los comentarios y responde durante el live</div>
+  </aside>
+
+  <div class="presenter-card">
+    <div class="avatar">S</div>
+    <div>
+      <div class="presenter-name">SEBASTIÁN</div>
+      <div class="presenter-role">Asistente de Reclutamiento y Selección</div>
+    </div>
+  </div>
+
+  <footer class="bottom-bar">
+    <div class="cta">
+      <span>¿BUSCAS UNA NUEVA OPORTUNIDAD?</span>
+      <strong>HABLEMOS Y CONOCE NUESTRAS VACANTES</strong>
+    </div>
+    <div class="whatsapp">
+      <div class="wa">WA</div>
+      <div>
+        <small>ESCRÍBEME POR WHATSAPP</small>
+        <strong>907 920 574</strong>
+      </div>
+    </div>
+    <div class="end">TE ESPERAMOS <b>›</b></div>
+  </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
